@@ -68,7 +68,6 @@ const Navbar = () => {
           <li><CustomLink to="about">About</CustomLink></li>
           <li><CustomLink to="clinics">Clinics</CustomLink></li>
           <li><CustomLink to="doctors">Doctors</CustomLink></li>
-          <li><CustomLink to="contact">Contact</CustomLink></li>
           <li>
             {user ? (
               <button
@@ -110,7 +109,6 @@ const Navbar = () => {
             <li><CustomLink to="about">About</CustomLink></li>
             <li><CustomLink to="clinics">Clinics</CustomLink></li>
             <li><CustomLink to="doctors">Doctors</CustomLink></li>
-            <li><CustomLink to="contact">Contact</CustomLink></li>
             <li>
               {user ? (
                 <button
