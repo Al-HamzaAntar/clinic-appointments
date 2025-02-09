@@ -1,6 +1,6 @@
 // src/pages/SignIn.jsx
 import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link as RouterLink } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
 function SignIn() {
@@ -53,6 +53,14 @@ function SignIn() {
             Sign In
           </button>
         </form>
+        <div className="mt-4 text-center">
+          <p className="text-sm">
+            Don't have an account?{' '}
+            <RouterLink to="/register" className="text-primary font-semibold hover:underline">
+              Register here
+            </RouterLink>
+          </p>
+        </div>
       </div>
     </div>
   );

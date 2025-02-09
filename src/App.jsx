@@ -7,6 +7,7 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import LandingPage from './pages/LandingPage';
 import BookingPage from './pages/BookingPage';
 import SignIn from './pages/SignIn';
+import Register from './pages/Register';
 import DashboardLayout from './components/DashboardLayout';
 import SuperAdminDashboard from './pages/SuperAdminDashboard';
 import ClinicsManagement from './pages/ClinicsManagement';
@@ -28,6 +29,8 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/book-appointment" element={<BookingPage />} />
             <Route path="/signin" element={<SignIn />} />
+            <Route path="/register" element={<Register />} />
+
             <Route path="/dashboard" element={<DashboardLayout />}>
               {/* Super Admin Routes */}
               <Route path="super" element={<SuperAdminDashboard />} />
