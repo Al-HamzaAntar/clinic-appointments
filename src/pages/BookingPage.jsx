@@ -13,11 +13,22 @@ function BookingPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   alert(`Appointment booked with ${formData.doctor} on ${formData.date} at ${formData.time} for ${formData.name}.`);
+  //   setFormData({ name: '', email: '', date: '', time: '', doctor: '' });
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Appointment booked with ${formData.doctor} on ${formData.date} at ${formData.time} for ${formData.name}.`);
-    setFormData({ name: '', email: '', date: '', time: '', doctor: '' });
+    const newAppointment = { ...formData, id: Date.now(), status: "Pending" };
+    
+    const savedAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    localStorage.setItem("appointments", JSON.stringify([...savedAppointments, newAppointment]));
+  
+    setFormData({ name: "", email: "", date: "", time: "", doctor: "" });
+    alert("Appointment booked successfully!");
   };
+  
 
   return (
     <div className="flex-grow flex items-center justify-center">

@@ -1,13 +1,13 @@
-// // src/context/AppointmentContext.jsx
-// import React, { createContext, useState } from 'react';
+// src/context/AppointmentContext.jsx
+import React, { createContext, useState } from 'react';
 
-// export const AppointmentContext = createContext();
+export const AppointmentContext = createContext();
 
-// export const AppointmentProvider = ({ children }) => {
-//   const [appointments, setAppointments] = useState([]);
-//   return (
-//     <AppointmentContext.Provider value={{ appointments, setAppointments }}>
-//       {children}
-//     </AppointmentContext.Provider>
-//   );
-// };
+export const AppointmentProvider = ({ children }) => {
+  const [appointments, setAppointments] = useState([]);
+  return (
+    <AppointmentContext.Provider value={{ appointments, setAppointments }}>
+      {children}
+    </AppointmentContext.Provider>
+  );
+};

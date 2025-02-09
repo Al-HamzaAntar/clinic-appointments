@@ -44,6 +44,7 @@ function App() {
               {/* Secretary Routes */}
               <Route path="secretary" element={<SecretaryDashboard />} />
               <Route path="appointments" element={<AppointmentsManagement />} />
+
               {/* Secretary can share Settings route if needed */}
             </Route>
           </Routes>
