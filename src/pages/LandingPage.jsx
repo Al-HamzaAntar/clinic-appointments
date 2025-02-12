@@ -15,8 +15,7 @@ function LandingPage() {
       <Doctors />
       <Herodown />
       {/* Optional: Link to the Sign In page for dashboard access */}
-      <div className="text-center py-8">
-      </div>
+      <div className="text-center py-8"></div>
     </div>
   );
 }

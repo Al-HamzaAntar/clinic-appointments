@@ -40,7 +40,7 @@ function Doctors() {
           <div className="text-center mt-8">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="bg-primary text-white px-6 py-2 rounded hover:bg-[#117068] transition"
+              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-[#117068] transition"
             >
               {showAll ? 'Show Less' : 'More'}
             </button>

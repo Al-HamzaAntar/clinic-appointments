@@ -79,7 +79,7 @@ const Navbar = () => {
             ) : (
               <RouterLink
                 to="/signin"
-                className="bg-primary text-white px-4 py-2 rounded hover:bg-[#117068]"
+                className="bg-primary text-white px-4 py-2 rounded-full hover:bg-[#117068]"
               >
                 Sign In
               </RouterLink>

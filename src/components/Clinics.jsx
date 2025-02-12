@@ -1,4 +1,8 @@
+// src/pages/Clinics.jsx
 import React from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 function Clinics() {
   const clinics = [
@@ -25,26 +29,60 @@ function Clinics() {
       name: 'Clinic D', 
       description: 'Comprehensive healthcare.',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UqUxZkk8j-8aAEsjczXXro8iIAQLrwj1B0aL151b9PYVcCXrCJO7rwAjz6KDM8ni08k&usqp=CAU'
-    },
+    }
   ];
+
+  // Settings for react-slick carousel
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4, // Number of slides to show at once on large screens
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // For screens less than 1024px
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768, // For screens less than 768px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480, // For screens less than 480px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <section id="clinics" className="py-16 px-4 bg-gray-100">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-primary text-center mb-8">Our Clinics</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Slider {...settings}>
           {clinics.map((clinic) => (
-            <div key={clinic.id} className="bg-white p-6 rounded shadow">
-              <img 
-                src={clinic.image} 
-                alt={clinic.name} 
-                className="w-full h-40 object-cover rounded mb-4" 
-              />
-              <h3 className="text-xl font-semibold mb-2">{clinic.name}</h3>
-              <p className="text-gray-600">{clinic.description}</p>
+            <div key={clinic.id} className="p-2">
+              <div className="bg-white p-6 rounded shadow">
+                <img 
+                  src={clinic.image} 
+                  alt={clinic.name} 
+                  className="w-full h-40 object-cover rounded mb-4" 
+                />
+                <h3 className="text-xl font-semibold mb-2">{clinic.name}</h3>
+                <p className="text-gray-600">{clinic.description}</p>
+              </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </section>
   );
