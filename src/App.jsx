@@ -2,7 +2,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import LandingPage from './pages/LandingPage';
 import BookingPage from './pages/BookingPage';
@@ -52,7 +51,6 @@ function App() {
             </Route>
           </Routes>
         </main>
-        <Footer />
       </div>
       <ScrollToTopButton />
     </>

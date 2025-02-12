@@ -59,7 +59,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white bg-opacity-30 backdrop-blur-sm shadow-md z-50">
+    <nav className="fixed top-5 left-1/2 -translate-x-1/2 w-11/12 rounded-2xl bg-white bg-opacity-30 backdrop-blur-sm shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         <Logo />
         {/* Desktop Menu */}
@@ -103,7 +103,7 @@ const Navbar = () => {
       </div>
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white bg-opacity-90 backdrop-blur-sm">
+        <div className="md:hidden bg-white bg-opacity-90 backdrop-blur-sm rounded-3xl my-4">
           <ul className="flex flex-col items-center space-y-4 py-4">
             <li><CustomLink to="hero">Home</CustomLink></li>
             <li><CustomLink to="about">About</CustomLink></li>
