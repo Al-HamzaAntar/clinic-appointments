@@ -59,11 +59,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-5 left-1/2 -translate-x-1/2 w-11/12 rounded-2xl bg-white bg-opacity-30 backdrop-blur-sm shadow-md z-50">
+    <nav className="fixed top-1 left-1/2 -translate-x-1/2 w-11/12 rounded-2xl bg-white bg-opacity-30 backdrop-blur-sm shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         <Logo />
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6">
+        <ul className="hidden md:flex space-x-6 items-center">
           <li><CustomLink to="hero">Home</CustomLink></li>
           <li><CustomLink to="about">About</CustomLink></li>
           <li><CustomLink to="clinics">Clinics</CustomLink></li>
@@ -72,7 +72,7 @@ const Navbar = () => {
             {user ? (
               <button
                 onClick={logout}
-                className="bg-primary text-white px-4 py-2 rounded hover:bg-[#117068]"
+                className="bg-primary text-white px-4 py-2 rounded-full hover:bg-[#117068]"
               >
                 Log Out
               </button>
@@ -101,9 +101,9 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      {/* Mobile Menu */}
+      {/* Mobile Menu bg-white bg-opacity-90 backdrop-blur-sm rounded-3xl my-4*/}
       {isOpen && (
-        <div className="md:hidden bg-white bg-opacity-90 backdrop-blur-sm rounded-3xl my-4">
+        <div className="md:hidden">
           <ul className="flex flex-col items-center space-y-4 py-4">
             <li><CustomLink to="hero">Home</CustomLink></li>
             <li><CustomLink to="about">About</CustomLink></li>
