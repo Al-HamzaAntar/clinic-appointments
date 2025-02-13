@@ -1,5 +1,6 @@
 // src/components/Footer.jsx
 import React from 'react';
+import { FaStethoscope } from "react-icons/fa6";
 
 function Footer() {
   return (
@@ -7,7 +8,10 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Column 1: Logo and Description */}
         <div>
-          <h2 className="text-2xl font-bold text-primary">Clinic</h2>
+          <div className="flex items-center text-2xl font-bold text-primary">
+            <FaStethoscope />
+            <h2 className="text-2xl font-bold text-primary">Clinic</h2>
+          </div>
           <p className="mt-4 text-gray-400">
             Your trusted healthcare partner providing quality care.
           </p>

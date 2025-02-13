@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import { FaStethoscope } from "react-icons/fa6";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,8 +45,9 @@ const Navbar = () => {
           to="hero"
           smooth={true}
           duration={500}
-          className="text-xl font-bold text-primary cursor-pointer"
+          className="flex items-center text-xl font-bold text-primary cursor-pointer"
         >
+          <FaStethoscope />
           Clinic
         </ScrollLink>
       );
