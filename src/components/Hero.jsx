@@ -6,14 +6,16 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="h-screen w-full bg-cover bg-center flex items-center justify-center"
+      className="h-screen w-full bg-cover bg-center flex items-center justify-start"
       style={{ backgroundImage: "url('https://www.conwaymedicalcenter.com/wp-content/uploads/2020/12/ten-reasons-you-must-have-a-primary-care-doctor.jpg')" }}
-    >
-      <div className="bg-black bg-opacity-50 p-8 rounded">
-        <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">
-          Welcome to Our Clinic
+    > 
+      {/* bg-black bg-opacity-50 p-8 rounded */}
+      <div className="bg-black bg-opacity-15 p-8 rounded md:ml-20 mt-4">
+        <h1 className="text-4xl md:text-6xl text-white font-bold mb-4 text-left">
+          Find the Good Life 
+          with <span className='text-primary'>Good Health</span>
         </h1>
-        <p className="text-xl text-white mb-6">
+        <p className="text-xl text-white mb-6 text-left">
           Your health is our priority. Book your appointment now!
         </p>
         <button

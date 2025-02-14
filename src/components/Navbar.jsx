@@ -53,7 +53,8 @@ const Navbar = () => {
       );
     } else {
       return (
-        <RouterLink to="/" className="text-xl font-bold text-primary">
+        <RouterLink to="/" className="flex items-center text-xl font-bold text-primary">
+          <FaStethoscope />
           Clinic
         </RouterLink>
       );
